@@ -5,3 +5,32 @@
     cliRegister: "9876543210",
     cliCountry: "Vietnam"
 }
+{
+    "_id" : ObjectId("5ac5f3460c18dc2630ea440b"),
+    "cartId" : 0,
+    "cartStatus" : "A",
+    "userId" : 0,
+    "createDate" : ISODate("2018-04-05T09:41:01.335Z"),
+    "numberProduct" : 4,
+    "products" : [ 
+        {
+            "_id" : null,
+            "productId" : 2,
+            "categories" : "A",
+            "name" : "Sản phẩm số 3",
+            "price" : 21600.0,
+            "saleOff" : 0.0,
+            "status" : "HOT SALE",
+            "origin" : "Việt Nam",
+            "quantity" : 4,
+            "imageUrl" : "./assets/images/products/productSample.jpg",
+            "color" : [ 
+                "White", 
+                "Black"
+            ],
+            "shortDecscription" : "Sản phẩm chất lượng cao",
+            "longDecscription" : "Long decsription: Sản phẩm số 3"
+        }
+    ],
+    "totalAmounts" : 21600
+} 
