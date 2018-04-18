@@ -35,7 +35,7 @@ public class Client {
 	 */
 	@Id
 	@Field("cliNumber")
-	private String cliNember;
+	private String cliNumber;
 
 	/**
 	 * @Field
@@ -55,12 +55,12 @@ public class Client {
 	@Field("cliCountry")
 	private String cliCountry;
 
-	public String getCliNember() {
-		return cliNember;
+	public String getCliNumber() {
+		return cliNumber;
 	}
 
-	public void setCliNember(String cliNember) {
-		this.cliNember = cliNember;
+	public void setCliNumber(String cliNumber) {
+		this.cliNumber = cliNumber;
 	}
 
 	public String getCliName() {

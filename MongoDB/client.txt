@@ -1,0 +1,7 @@
+{
+    cliNumber:"001",
+    cliName: "Sang",
+    cliDateBirth: "05/02/1993",
+    cliRegister: "9876543210",
+    cliCountry: "Vietnam"
+}

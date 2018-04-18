@@ -26,10 +26,10 @@
 <script	src="resources/js/angularDatatables/dist/plugins/select/angular-datatables.select.min.js"></script>
 <link rel="stylesheet" href="resources/js/angularDatatables/vendor/datatables-select/css/select.dataTables.css">
 
-<script src="resources/js/bootstrap/js/bootstrap.js"></script>
-<script src="resources/js/bootstrap/js/moment.js"></script>
-<script src="resources/js/bootstrap/js/bootstrap-datetimepicker.js"></script>
-<link rel="stylesheet"	href="resources/js/bootstrap/css/bootstrap.min.css">
+<script src="resources/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet"	href="resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"	href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css">
 
 <!-- CUSTOM -->
@@ -38,21 +38,13 @@
 </head>
 <body ng-app="myApp" ng-controller="dashboardCtrl as vm">
 	<div class="container">
-		<h2>Example Angular (Bootstrap), DataTables, Spring, REST,
-			MongoDB</h2>
+		<h2>System Example</h2>
 
 		<form class="form-horizontal" role="form">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="name">Name:</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" ng-model="vm.name">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="control-label col-sm-2" for="lastname">Last
-					name:</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" ng-model="vm.lastname">
 				</div>
 			</div>
 			<div class="form-group">

@@ -14,7 +14,7 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	vm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
 		"contentType": "application/json; charset=utf-8",
 		dataType: "json",
-		"url": "/Baisc/mongoGetAllClients",
+		"url": "/com.example/mongoGetAllClients",
 		"type": 'GET'
 	})
 	.withOption('createdRow', function(row, data, dataIndex){
@@ -34,7 +34,6 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	    }),
 	    DTColumnBuilder.newColumn('cliNumber').withTitle('_id').notVisible(),
 	    DTColumnBuilder.newColumn('cliName').withTitle('Name'),
-	    DTColumnBuilder.newColumn('cliLastname').withTitle('Last Name'),
 	    DTColumnBuilder.newColumn('cliDatebirth').withTitle('Date Birth'),
 	    DTColumnBuilder.newColumn('cliRegister').withTitle('Register'),
 	    DTColumnBuilder.newColumn('cliCountry').withTitle('Country')
@@ -45,11 +44,10 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	}
 	
 	vm.callInsert = function(){
-		callRestMongo.getRestMongo("insertClient", vm.name, vm.lastname, vm.dateBirth, vm.register, vm.country, '')
+		callRestMongo.getRestMongo("insertClient", vm.name, vm.dateBirth, vm.register, vm.country, '')
 			.then(function(data){
 				vm.dtInstance.reloadData();
 				vm.name = '';
-				vm.lastname = '';
 				vm.dateBirth = '';
 				vm.register = '';
 				vm.country = '';
@@ -66,7 +64,7 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 			}
 		}
 	
-		callRestMongo.getRestMongo("deleteClientByNumbers", vm.name, vm.lastname, vm.dateBirth, vm.register, vm.country, checked.join(",") )
+		callRestMongo.getRestMongo("deleteClientByNumbers", vm.name, vm.dateBirth, vm.register, vm.country, checked.join(",") )
 			.then(function(data){
 				vm.dtInstance.reloadData();
 			}
@@ -88,14 +86,14 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
  
 app.factory('callRestMongo', function($http){
 	return{
-		getRestMongo: function(service, name, lastname, dateBirth, register, country, checked){
+		getRestMongo: function(service, name, dateBirth, register, country, checked){
 			
-			var Indata = {'name': name, 'lastname': lastname, 'dateBirth': dateBirth,
+			var Indata = {'name': name, 'dateBirth': dateBirth,
 							'register': register, 'country': country, 'checked': checked };
 			
 			console.log(Indata);
 			return $http({
-					url: '/Basic/' + service,
+					url: '/com.example/' + service,
 					method: 'POST',
 					params: Indata
 			})
