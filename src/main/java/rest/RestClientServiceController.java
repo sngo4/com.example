@@ -45,12 +45,12 @@ import service.ClientService;
  *               is inherited and does not need to be added on the method level.
  */
 @RestController
-public class RestServiceController {
+public class RestClientServiceController {
 	@Autowired
 	private ClientService clientService;
 
 	/**
-	 * http://localhost:9090/Basic/mongoGetAllClients
+	 * http://localhost:9090/com.example/mongoGetAllClients
 	 * 
 	 * @return
 	 */
@@ -63,7 +63,7 @@ public class RestServiceController {
 	}
 
 	/**
-	 * http://localhost:9090/Basic/mgGetClientByName?name=Sngo4
+	 * http://localhost:9090/com.example/mgGetClientByName?name=Sngo4
 	 * 
 	 * @param name
 	 * @return
@@ -81,7 +81,7 @@ public class RestServiceController {
 	}
 
 	/**
-	 * http://localhost:9090/Basic/insertClient?name=Sngo4&
+	 * http://localhost:9090/com.example/insertClient?name=Sngo4&
 	 * dateBirth=02/05/1993&register=9876543210&&country=VIETNAM
 	 * 
 	 * @param name
@@ -118,7 +118,7 @@ public class RestServiceController {
 	}
 
 	/**
-	 * http://localhost:9090/Basic/updateClient?name=Sngo4&dateBirth=02/05/1993&
+	 * http://localhost:9090/com.example/updateClient?name=Sngo4&dateBirth=02/05/1993&
 	 * register=9876543210&&country=VIETNAM
 	 * 
 	 * @param name
@@ -155,7 +155,7 @@ public class RestServiceController {
 	}
 
 	/**
-	 * http://localhost:9090/Basic/deleteClient?name=Sngo4&
+	 * http://localhost:9090/com.example/deleteClient?name=Sngo4&
 	 * dateBirth=02/05/1993&register=9876543210&&country=VIETNAM
 	 * 
 	 * @param name
@@ -188,7 +188,7 @@ public class RestServiceController {
 	}
 
 	/**
-	 * http://localhost:9090/Basic/mgGetClientByName?clientNumbers=?,?,?,?,?
+	 * http://localhost:9090/com.example/mgGetClientByName?clientNumbers=?,?,?,?,?
 	 * 
 	 * @param clientNumbers
 	 * @return

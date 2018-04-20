@@ -27,71 +27,94 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 /**
  * @Document
  */
-@Document(collection = "client")
-public class Client {
+@Document(collection = "account")
+public class Account {
 	/**
 	 * @Id
 	 * @Field
 	 */
 	@Id
-	@Field("cliNumber")
-	private String cliNumber;
+	@Field("accRegister")
+	private String accRegister;
 
 	/**
 	 * @Field
 	 */
-	@Field("cliName")
-	private String cliName;
+	@Field("accName")
+	private String accName;
 
-	@Field("cliDatebirth")
+	@Field("accDate")
 	@DateTimeFormat(iso=ISO.DATE_TIME)
 	@JsonSerialize(using = util.JSONSerializer.class)
 	@JsonDeserialize(using = util.JSONDeserialize.class)
-	private Date cliDatebirth;
+	private Date accDate;
 
-	@Field("cliRegister")
-	private String cliRegister;
+	@Field("accTemperatureC")
+	private int accTemperatureC;
 
-	@Field("cliCountry")
-	private String cliCountry;
+	@Field("accTemperatureF")
+	private int accTemperatureF;
+	
+	@Field("accSound")
+	private int accSound;
+	
+	@Field("accImageUrl")
+	private String accImageUrl;
 
-	public String getCliNumber() {
-		return cliNumber;
+	public String getAccRegister() {
+		return accRegister;
 	}
 
-	public void setCliNumber(String cliNumber) {
-		this.cliNumber = cliNumber;
+	public void setAccRegister(String accRegister) {
+		this.accRegister = accRegister;
 	}
 
-	public String getCliName() {
-		return cliName;
+	public String getAccName() {
+		return accName;
 	}
 
-	public void setCliName(String cliName) {
-		this.cliName = cliName;
+	public void setAccName(String accName) {
+		this.accName = accName;
 	}
 
-	public Date getCliDatebirth() {
-		return cliDatebirth;
-	}
-	public void setCliDatebirth(Date cliDatebirth) {
-		this.cliDatebirth = cliDatebirth;
+	public Date getAccDate() {
+		return accDate;
 	}
 
-	public String getCliRegister() {
-		return cliRegister;
+	public void setAccDate(Date accDate) {
+		this.accDate = accDate;
 	}
 
-	public void setCliRegister(String cliRegister) {
-		this.cliRegister = cliRegister;
+	public int getAccTemperatureC() {
+		return accTemperatureC;
 	}
 
-	public String getCliCountry() {
-		return cliCountry;
+	public void setAccTemperatureC(int accTemperatureC) {
+		this.accTemperatureC = accTemperatureC;
 	}
 
-	public void setCliCountry(String cliCountry) {
-		this.cliCountry = cliCountry;
+	public int getAccTemperatureF() {
+		return accTemperatureF;
+	}
+
+	public void setAccTemperatureF(int accTemperatureF) {
+		this.accTemperatureF = accTemperatureF;
+	}
+
+	public int getAccSound() {
+		return accSound;
+	}
+
+	public void setAccSound(int accSound) {
+		this.accSound = accSound;
+	}
+
+	public String getAccImageUrl() {
+		return accImageUrl;
+	}
+
+	public void setAccImageUrl(String accImageUrl) {
+		this.accImageUrl = accImageUrl;
 	}
 
 }

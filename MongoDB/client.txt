@@ -1,10 +1,136 @@
 {
     cliNumber:"001",
     cliName: "Sang",
-    cliDateBirth: "05/02/1993",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
     cliRegister: "9876543210",
     cliCountry: "Vietnam"
 }
+{
+    cliNumber:"002",
+    cliName: "Sang 2",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543212",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"003",
+    cliName: "Sang 3",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543213",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"004",
+    cliName: "Sang 4",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543214",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"005",
+    cliName: "Sang 5",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543215",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"006",
+    cliName: "Sang 6",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543216",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"007",
+    cliName: "Sang",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543217",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"008",
+    cliName: "Sang 8",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543218",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"009",
+    cliName: "Sang",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543219",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"010",
+    cliName: "test",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543220",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"011",
+    cliName: "test 11",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543221",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"012",
+    cliName: "test 12",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543222",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"013",
+    cliName: "test 13",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543223",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"014",
+    cliName: "test 14",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543224",
+    cliCountry: "Vietnam"
+}
+{
+    cliNumber:"015",
+    cliName: "black",
+	"cliDateBirth" : ISODate("1993-02-05T09:41:01.335Z"),
+    cliRegister: "9876543225",
+    cliCountry: "Vietnam"
+}
+{
+    "_id" : ObjectId("5ad81f4510c21e0c94914357"),
+    "_class" : "collection.Client",
+    "cliName" : "color",
+    "cliDatebirth" : ISODate("1993-02-04T17:00:00.000Z"),
+    "cliRegister" : "9876543254",
+    "cliCountry" : "Vietnam"
+}
+{
+    cliNumber:"016",
+    cliName: "BLUE",
+	"cliDateBirth" : ISODate("1993-05-02T09:41:01.335Z"),
+    cliRegister: "9876543225",
+    cliCountry: "Vietnam"
+}
+
+--------------------------------ACCOUNT------------------------------------------------------------------------------
+{
+    "accRegister":"987654321",
+    "accName": "Sang Ngo",
+	"accountDate" : ISODate("2018-04-20T09:41:01.335Z"),
+    "accTemperatureC": 30,
+    "accTemperatureF": 76,
+	"accSound": 76,
+	"accImageUrl": "<c:url value='/resources/image/goldfinch.jpg'/>"
+}
+
+----------------------------------------------------------------------------------------------------------------------
 {
     "_id" : ObjectId("5ac5f3460c18dc2630ea440b"),
     "cartId" : 0,

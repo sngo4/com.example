@@ -21,8 +21,8 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 		// recompile so we can bind angular directive to the DT
 		$compile(angular.element(row).contents())($scope);
 	});
-	
-	
+	//call to account.jsp
+	$scope.url = window.location.href + "account";
 	vm.dtColumns = [
 	    DTColumnBuilder.newColumn(null).withTitle('').notSortable().renderWith(function(data, type, full, meta){
 	    	
@@ -36,10 +36,14 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	    DTColumnBuilder.newColumn('cliName').withTitle('Name'),
 	    DTColumnBuilder.newColumn('cliDatebirth').withTitle('Date Birth'),
 	    DTColumnBuilder.newColumn('cliRegister').withTitle('Register'),
-	    DTColumnBuilder.newColumn('cliCountry').withTitle('Country')
+	    DTColumnBuilder.newColumn('cliCountry').withTitle('Country'),
+	 // ----------------- Add column with button to access account ---------------
+        DTColumnBuilder.newColumn(null).withTitle('').notSortable()
+          .renderWith(function (data, type, full, meta) {
+               return '<a class="btn btn-info" ng-model="vm.buttonSearch" href="'+$scope.url+'">Access</a>';
+        })
 	];
-	
-	vm.callSearch = function(){
+	vm.callReload = function(){
 		vm.dtInstance.reloadData();
 	}
 	
