@@ -37,6 +37,7 @@ public class RestAccountServiceController {
 	 */
 	@RequestMapping(value = "/getAccountInfo", method = RequestMethod.GET)
 	public List<Account> getAccountInfo(@QueryParam("accRegister") String accRegister){
+		//hard code
 		accRegister = "987654321";
 		List<Account> accounts = accountService.getAccInfo(accRegister);
 		return accounts;		

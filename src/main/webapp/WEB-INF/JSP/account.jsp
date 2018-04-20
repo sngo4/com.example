@@ -51,6 +51,12 @@ body  {
 					dt-options="accvm.dtOptions" dt-column-defs="accvm.dtColumnDefs"
 					dt-columns="accvm.dtColumns" dt-instance="accvm.dtInstance"></table>
 			</div>
+			<div class="form-group"> 
+				<button type="button" class="btn btn-info btn-lg"
+					ng-model="accvm.buttonReload" ng-click="accvm.callReload()">
+					<span class="glyphicon glyphicon-refresh"></span> Reload
+				</button>
+			</div>
 		</form>
 	</div>
 

@@ -1,7 +1,11 @@
 package dao;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -47,8 +51,26 @@ public class AccountDAOImpl implements AccountDAO{
 
 		Query query = new Query(criteria);
 
-		List<Account> listClient = mongoTemplate.find(query, Account.class, "account");
+		List<Account> listAccount = mongoTemplate.find(query, Account.class, "account");
+		
+		//hard code to test starts
+		int maxC = 35;
+		int minC = 25;
+		
+		int maxF = 98;
+		int minF = 35;
+		
+		int maxDB = 98;
+		int minDB = 35;
+		
+		Random rand = new Random(); 
+		for (Account account : listAccount) {
+			account.setAccTemperatureC(rand.nextInt((maxC - minC) + 1) + minC);
+			account.setAccTemperatureF(rand.nextInt((maxF - minF) + 1) + minF);
+			account.setAccSound(rand.nextInt((maxDB - minDB) + 1) + minDB);
+		}
+		//hard code to test ends
 
-		return listClient == null ? new ArrayList<Account>() : listClient;
+		return listAccount == null ? new ArrayList<Account>() : listAccount;
 	}
 }
