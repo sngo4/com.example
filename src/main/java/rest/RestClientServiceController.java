@@ -129,7 +129,7 @@ public class RestClientServiceController {
 	 * @return
 	 */
 	@RequestMapping(value = "/updateClient", method = RequestMethod.POST)
-	public boolean updateClient(@QueryParam("name") String name, @QueryParam("lastname") String lastname,
+	public boolean updateClient(@QueryParam("name") String name,
 			@QueryParam("dateBirth") String dateBirth, @QueryParam("register") String register,
 			@QueryParam("country") String country) {
 

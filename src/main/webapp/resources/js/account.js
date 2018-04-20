@@ -1,17 +1,41 @@
-var app = angular.module('myApp', [ 'datatables', 'datatables.select' ]);
+var app = angular.module('myAccApp', [ 'datatables', 'datatables.select' ]);
  
 app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 											DTOptionsBuilder, DTColumnBuilder, DTColumnDefBuilder) {
  
 	var numbersId = [];
 	
-	var vm = this;
-	vm.listClients = [];
-	vm.dtInstance = [];
-	vm.selected = {};
-	
+	var accvm = this;
+	accvm.listClients = [];
+	accvm.dtInstance = [];
+	accvm.selected = {};
+//	//--	----------------------getAllAccountInfo STARTS---------------
+//	// Angular DataTables Options
+//	accvm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
+//		"contentType": "application/json; charset=utf-8",
+//		dataType: "json",
+//		"url": "/com.example/getAllAccountInfo",
+//		"type": 'GET'
+//	})
+//	.withOption('createdRow', function(row, data, dataIndex){
+//		// recompile so we can bind angular directive to the DT
+//		$compile(angular.element(row).contents())($scope);
+//	});
+//
+//	accvm.dtColumns = [          
+//	    DTColumnBuilder.newColumn('accId').withTitle('_id').notVisible(),
+//	    DTColumnBuilder.newColumn('accRegister').withTitle('Register'),
+//	    DTColumnBuilder.newColumn('accName').withTitle('Name'),
+//	    DTColumnBuilder.newColumn('accDate').withTitle('Date'),
+//	    DTColumnBuilder.newColumn('accTemperatureC').withTitle('Temperature(C)'),
+//	    DTColumnBuilder.newColumn('accTemperatureF').withTitle('Temperature(F)'),
+//	    DTColumnBuilder.newColumn('accSound').withTitle('Sound (DB)'),
+//	    DTColumnBuilder.newColumn('accImageUrl').withTitle('Camera'),
+//	];
+//	//--	----------------------getAllAccountInfo ENDS---------------
+	//--	----------------------getAccountInfo STARTS---------------
 	// Angular DataTables Options
-	vm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
+	accvm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
 		"contentType": "application/json; charset=utf-8",
 		dataType: "json",
 		"url": "/com.example/getAccountInfo",
@@ -22,8 +46,8 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 		$compile(angular.element(row).contents())($scope);
 	});
 
-	vm.dtColumns = [
-	    DTColumnBuilder.newColumn('_id').withTitle('_id').notVisible(),            
+	accvm.dtColumns = [          
+	    DTColumnBuilder.newColumn('accId').withTitle('_id').notVisible(),
 	    DTColumnBuilder.newColumn('accRegister').withTitle('Register'),
 	    DTColumnBuilder.newColumn('accName').withTitle('Name'),
 	    DTColumnBuilder.newColumn('accDate').withTitle('Date'),
@@ -32,6 +56,30 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	    DTColumnBuilder.newColumn('accSound').withTitle('Sound (DB)'),
 	    DTColumnBuilder.newColumn('accImageUrl').withTitle('Camera'),
 	];
+	//--	----------------------getAccountInfo STARTS---------------
+	// Angular DataTables Options
+	accvm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
+		"contentType": "application/json; charset=utf-8",
+		dataType: "json",
+		"url": "/com.example/getAccountInfo",
+		"type": 'GET'
+	})
+	.withOption('createdRow', function(row, data, dataIndex){
+		// recompile so we can bind angular directive to the DT
+		$compile(angular.element(row).contents())($scope);
+	});
+
+	accvm.dtColumns = [          
+	    DTColumnBuilder.newColumn('accId').withTitle('_id').notVisible(),
+	    DTColumnBuilder.newColumn('accRegister').withTitle('Register'),
+	    DTColumnBuilder.newColumn('accName').withTitle('Name'),
+	    DTColumnBuilder.newColumn('accDate').withTitle('Date'),
+	    DTColumnBuilder.newColumn('accTemperatureC').withTitle('Temperature(C)'),
+	    DTColumnBuilder.newColumn('accTemperatureF').withTitle('Temperature(F)'),
+	    DTColumnBuilder.newColumn('accSound').withTitle('Sound (DB)'),
+	    DTColumnBuilder.newColumn('accImageUrl').withTitle('Camera'),
+	];
+	//--	----------------------mongoGetAllClients ENDS---------------
 	
 //	// JQUERY DATE TIME PICKER
 //	$(document).ready(function(){

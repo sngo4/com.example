@@ -10,6 +10,7 @@ import collection.Account;
  *
  */
 public interface AccountDAO {
-	public List<Account> getAccInfo();
+	public List<Account> getAllAccInfo();
+	public List<Account> getAccInfo(String accRegister);
 
 }

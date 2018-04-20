@@ -33,6 +33,7 @@
 <link rel="stylesheet"	href="resources/js/angularDatatables/vendor/bootstrap/dist/css/bootstrap.min.css">
 <!-- CUSTOM -->
 <script src="resources/js/account.js"></script>
+<script src="resources/js/clientManager.js"></script>
 
 <style>
 body  {
@@ -41,14 +42,14 @@ body  {
 </style>
 
 </head>
-<body ng-app="myApp" ng-controller="dashboardCtrl as vm">
+<body ng-app="myAccApp" ng-controller="dashboardCtrl as accvm">
 	<div class="container">
 		<h2>ACCOUNT</h2>
 		<form class="form-horizontal" role="form">
 			<div>
 				<table width="100%" datatable="" class="row-border hover"
-					dt-options="vm.dtOptions" dt-column-defs="vm.dtColumnDefs"
-					dt-columns="vm.dtColumns" dt-instance="vm.dtInstance"></table>
+					dt-options="accvm.dtOptions" dt-column-defs="accvm.dtColumnDefs"
+					dt-columns="accvm.dtColumns" dt-instance="accvm.dtInstance"></table>
 			</div>
 		</form>
 	</div>

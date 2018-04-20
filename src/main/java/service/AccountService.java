@@ -10,6 +10,8 @@ import collection.Account;
  *
  */
 public interface AccountService {
+	public List<Account> getAllAccInfo();
 
-	public List<Account> getAccInfo();
+	public List<Account> getAccInfo(String accRegister);
+	
 }

@@ -34,6 +34,9 @@ public class Account {
 	 * @Field
 	 */
 	@Id
+	@Field("accId")
+	private String accId;
+	
 	@Field("accRegister")
 	private String accRegister;
 
@@ -60,6 +63,14 @@ public class Account {
 	
 	@Field("accImageUrl")
 	private String accImageUrl;
+
+	public String getAccId() {
+		return accId;
+	}
+
+	public void setAccId(String accId) {
+		this.accId = accId;
+	}
 
 	public String getAccRegister() {
 		return accRegister;

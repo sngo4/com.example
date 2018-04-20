@@ -18,7 +18,11 @@ public class AccountServiceImpl  implements AccountService{
 
 	@Autowired
 	private AccountDAO accountDAO;
-	public List<Account> getAccInfo(){
-		return accountDAO.getAccInfo();
+	public List<Account> getAllAccInfo(){
+		return accountDAO.getAllAccInfo();
+	}
+	
+	public List<Account> getAccInfo(String accRegister){
+		return accountDAO.getAccInfo(accRegister);
 	}
 }
