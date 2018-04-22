@@ -1,9 +1,6 @@
 package dao;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -47,11 +44,12 @@ public class AccountDAOImpl implements AccountDAO{
 	 */
 	public List<Account> getAccInfo(String accRegister) {
 		
-		Criteria criteria = Criteria.where("accRegister").in(accRegister);
+		Criteria criteria = Criteria.where("accRegister").is(accRegister);
 
-		Query query = new Query(criteria);
-
-		List<Account> listAccount = mongoTemplate.find(query, Account.class, "account");
+		Query query = new Query();
+		query.addCriteria(criteria);
+		System.out.println(query);
+		List<Account> listAccount = mongoTemplate.find(query, Account.class,"account");
 		
 		//hard code to test starts
 		int maxC = 35;

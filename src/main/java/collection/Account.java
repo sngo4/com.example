@@ -34,8 +34,8 @@ public class Account {
 	 * @Field
 	 */
 	@Id
-	@Field("accId")
-	private String accId;
+	@Field("_id")
+	private String _id;
 	
 	@Field("accRegister")
 	private String accRegister;
@@ -46,11 +46,11 @@ public class Account {
 	@Field("accName")
 	private String accName;
 
-	@Field("accDate")
+	@Field("accountDate")
 	@DateTimeFormat(iso=ISO.DATE_TIME)
 	@JsonSerialize(using = util.JSONSerializer.class)
 	@JsonDeserialize(using = util.JSONDeserialize.class)
-	private Date accDate;
+	private Date accountDate;
 
 	@Field("accTemperatureC")
 	private int accTemperatureC;
@@ -65,11 +65,11 @@ public class Account {
 	private String accImageUrl;
 
 	public String getAccId() {
-		return accId;
+		return _id;
 	}
 
 	public void setAccId(String accId) {
-		this.accId = accId;
+		this._id = accId;
 	}
 
 	public String getAccRegister() {
@@ -89,11 +89,11 @@ public class Account {
 	}
 
 	public Date getAccDate() {
-		return accDate;
+		return accountDate;
 	}
 
 	public void setAccDate(Date accDate) {
-		this.accDate = accDate;
+		this.accountDate = accDate;
 	}
 
 	public int getAccTemperatureC() {

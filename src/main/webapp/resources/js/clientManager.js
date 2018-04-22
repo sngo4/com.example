@@ -22,7 +22,6 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 		$compile(angular.element(row).contents())($scope);
 	});
 	//call to account.jsp
-	$scope.url = window.location.href + "account";
 	vm.dtColumns = [
 	    DTColumnBuilder.newColumn(null).withTitle('').notSortable().renderWith(function(data, type, full, meta){
 	    	
@@ -40,6 +39,7 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 	 // ----------------- Add column with button to access account ---------------
         DTColumnBuilder.newColumn(null).withTitle('').notSortable()
           .renderWith(function (data, type, full, meta) {
+        	  $scope.url = window.location.href + "account?accRegister=" + data.cliRegister;
                return '<a class="btn btn-info" ng-model="vm.buttonSearch" href="'+$scope.url+'">Access</a>';
         })
 	];

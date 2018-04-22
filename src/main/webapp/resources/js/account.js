@@ -34,11 +34,14 @@ app.controller("dashboardCtrl", function($scope, $compile, callRestMongo,
 //	];
 //	//--	----------------------getAllAccountInfo ENDS---------------
 	//--	----------------------getAccountInfo hard code to test STARTS---------------
-	// Angular DataTables Options
+	// Angular DataTables Options'
+	var url = window.location.href;
+	var link = url.split('?');
+	
 	accvm.dtOptions = DTOptionsBuilder.newOptions().withOption('ajax', {
 		"contentType": "application/json; charset=utf-8",
 		dataType: "json",
-		"url": "/com.example/getAccountInfo",
+		"url": "/com.example/getAccountInfo?"+link[1],
 		"type": 'GET'
 	})
 	.withOption('createdRow', function(row, data, dataIndex){

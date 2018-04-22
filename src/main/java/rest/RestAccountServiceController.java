@@ -5,10 +5,8 @@ import java.util.List;
 import javax.ws.rs.QueryParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import collection.Account;
@@ -37,10 +35,8 @@ public class RestAccountServiceController {
 	 */
 	@RequestMapping(value = "/getAccountInfo", method = RequestMethod.GET)
 	public List<Account> getAccountInfo(@QueryParam("accRegister") String accRegister){
-		//hard code
-		accRegister = "987654321";
 		List<Account> accounts = accountService.getAccInfo(accRegister);
-		return accounts;		
+			return accounts;		
 	}
 	
 }
