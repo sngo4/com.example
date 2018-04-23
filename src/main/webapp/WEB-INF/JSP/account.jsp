@@ -33,7 +33,6 @@
 <link rel="stylesheet"	href="resources/js/angularDatatables/vendor/bootstrap/dist/css/bootstrap.min.css">
 <!-- CUSTOM -->
 <script src="resources/js/account.js"></script>
-<script src="resources/js/clientManager.js"></script>
 
 <style>
 body  {
@@ -42,18 +41,42 @@ body  {
 </style>
 
 </head>
-<body ng-app="myAccApp" ng-controller="dashboardCtrl as accvm">
+		<!-- POPUP START -->
+		<div ng-controller="AppCtrl" layout="row" ng-cloak=""
+			style="height: 30px" class="dialogdemoOpenFromCloseTo"  ng-app="MyPopupApp">
+			<style>
+				.edgePadding {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+			</style>
+
+			<div layout="column" layout-align="center start" layout-padding flex>
+				<div class="dialog-demo-content" layout="column"
+					layout-align="center center" style="width: 100%">
+					<md-button class="md-primary md-raised edgePadding"
+						ng-click="openFromLeft()"> Open From Left - Close To
+					Right </md-button>
+					<md-button class="md-primary md-raised edgePadding"
+						ng-click="openOffscreen()"> Open From Top Left - Close
+					Slide Down </md-button>
+				</div>
+
+			</div>
+		</div>
+		<!-- POPUP END -->
+<body ng-app="myApp" ng-controller="dashboardCtrl as vm">
 	<div class="container">
 		<h2>ACCOUNT</h2>
 		<form class="form-horizontal" role="form">
 			<div>
 				<table width="100%" datatable="" class="row-border hover"
-					dt-options="accvm.dtOptions" dt-column-defs="accvm.dtColumnDefs"
-					dt-columns="accvm.dtColumns" dt-instance="accvm.dtInstance"></table>
+					dt-options="vm.dtOptions" dt-column-defs="vm.dtColumnDefs"
+					dt-columns="vm.dtColumns" dt-instance="vm.dtInstance"></table>
 			</div>
 			<div class="form-group"> 
 				<button type="button" class="btn btn-info btn-lg"
-					ng-model="accvm.buttonReload" ng-click="accvm.callReload()">
+					ng-model="vm.buttonReload" ng-click="vm.callReload()">
 					<span class="glyphicon glyphicon-refresh"></span> Reload
 				</button>
 			</div>
